@@ -41,12 +41,21 @@ public class CheckingAccount implements HasMenu, Serializable {
       }
       else if (response.equals("1")){
         this.checkBalance();
+	System.out.println();
+	System.out.println("Check Balance....");
+	System.out.println();
       }
       else if (response.equals("2")){
         this.makeDeposit();
+	System.out.println();
+        System.out.println("Make Deposit....");
+        System.out.println();
       }
       else if (response.equals("3")){
         this.makeWithdrawal();
+	System.out.println();
+        System.out.println("Make Withdrawal....");
+        System.out.println();
       }
       else{
         System.out.println("Error: Invalid Input.");
