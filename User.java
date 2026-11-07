@@ -1,6 +1,7 @@
 import java.util.*;
+import java.io.*;
 
-abstract class User implements HasMenu, Serializable {
+public abstract class User implements HasMenu, Serializable {
   String userName = "";
   String PIN = "";
 
@@ -54,15 +55,20 @@ abstract class User implements HasMenu, Serializable {
   }// end getUserName
 
   public void setPIN(String PIN){
-    this.PIN = PIN;
+    if (PIN.matches("^\\d{4}$")){
+      this.PIN = PIN;
+    }
+    else {
+      System.out.println("PIN must be 4 digits...");
+      System.out.println("Setting PIN to 0000...");
+      this.PIN = "0000";
+    }// end if
   }// end setPIN
 
   public String getPIN(){
     return this.PIN;
   }// end getPIN
 
-  public abstract String getReport(){
-    
-  }// end getReport
+  public abstract String getReport();
 
 }// end user
