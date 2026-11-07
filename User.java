@@ -10,13 +10,13 @@ public abstract class User implements HasMenu, Serializable {
     boolean success = false;
     System.out.print("User Name: ");
     String userNameIn = sc.nextLine();
-    System.out.println();
     if (userNameIn.equals(this.userName)){
-      SYstem.out.print("PIN: ");
+      System.out.print("PIN: ");
       String PINIn = sc.nextLine();
       System.out.println();
       if (PINIn.equals(this.PIN)){
         System.out.println("Login Sucessful......");
+	System.out.println();
         success = true;
       }
       else {

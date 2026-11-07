@@ -41,21 +41,12 @@ public class CheckingAccount implements HasMenu, Serializable {
       }
       else if (response.equals("1")){
         this.checkBalance();
-	System.out.println();
-	System.out.println("Check Balance....");
-	System.out.println();
       }
       else if (response.equals("2")){
         this.makeDeposit();
-	System.out.println();
-        System.out.println("Make Deposit....");
-        System.out.println();
       }
       else if (response.equals("3")){
         this.makeWithdrawal();
-	System.out.println();
-        System.out.println("Make Withdrawal....");
-        System.out.println();
       }
       else{
         System.out.println("Error: Invalid Input.");
@@ -105,11 +96,19 @@ public class CheckingAccount implements HasMenu, Serializable {
   }// end makeDeposit
 
   public void makeWithdrawal(){
-    boolean keepeGoing = true;
-    double withdrawal;
-    System.out.print("How much to withdrawal? ");
-    withdrawal = this.getDouble();
-    System.out.println();
+    boolean keepGoing = true;
+    double withdrawal = 0d;
+    while (keepGoing){
+      System.out.print("How much to withdrawal? ");
+      withdrawal = this.getDouble();
+      System.out.println();
+      if (withdrawal >= 0d){
+        keepGoing = false;
+      } else {
+        System.out.println("Error: Withdrawals cannot be a negative number.");
+        System.out.println();
+      }// end if
+    }// end while
     this.balance -= withdrawal;
     System.out.print("New Balance: ");
     System.out.println(this.getBalanceString());
