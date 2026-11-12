@@ -16,6 +16,9 @@ Admin.class: Admin.java User.class HasMenu.class
 HasMenu.class: HasMenu.java
 	javac -g HasMenu.java
 
+Bank.class: Bank.java Admin.class Customer.class HasMenu.class
+	javac -g Bank.java
+
 testAdmin: Admin.class
 	java Admin
 
@@ -27,6 +30,9 @@ testChecking: CheckingAccount.class
 
 testSavings: SavingsAccount.class
 	java SavingsAccount
+
+run: Bank.class
+	java Bank
 
 clean:
 	rm *.class
