@@ -15,7 +15,7 @@ public abstract class User implements HasMenu, Serializable {
       String PINIn = sc.nextLine();
       System.out.println();
       if (PINIn.equals(this.PIN)){
-        System.out.println("Login Sucessful......");
+        System.out.println("Login Successful......");
 	System.out.println();
         success = true;
       }

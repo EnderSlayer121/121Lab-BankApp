@@ -10,6 +10,9 @@ CheckingAccount.class: CheckingAccount.java HasMenu.class
 SavingsAccount.class: SavingsAccount.java CheckingAccount.class
 	javac -g SavingsAccount.java
 
+Admin.class: Admin.java User.class HasMenu.class
+	javac -g Admin.java
+
 HasMenu.class: HasMenu.java
 	javac -g HasMenu.java
 

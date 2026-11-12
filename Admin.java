@@ -29,6 +29,13 @@ public class Admin extends User implements HasMenu, Serializable {
     return userInput;
   }// end menu
 
+  public void start(){
+    //to be implemented in bank
+  }// end start
 
-
+  public String getReport(){
+    String report = "Admin Username: " + this.getUserName();
+    report += ", Admin Password: " + this.getPIN();
+    return report;
+  }//end getReport
 }// end Admin
