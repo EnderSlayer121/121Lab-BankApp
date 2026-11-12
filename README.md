@@ -1,7 +1,7 @@
 # 121Lab-BankApp
 
 ## UML
-![Alt text](BankA.svg)
+![Alt text](BankB.svg)
 
 ## HasMenu
 ```
