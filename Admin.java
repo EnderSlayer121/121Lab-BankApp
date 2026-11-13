@@ -30,7 +30,7 @@ public class Admin extends User implements HasMenu, Serializable {
   }// end menu
 
   public void start(){
-    //to be implemented in bank
+ // thing, yeah... its in Bank.java bru.
   }// end start
 
   public String getReport(){

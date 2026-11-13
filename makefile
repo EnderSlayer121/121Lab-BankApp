@@ -34,5 +34,8 @@ testSavings: SavingsAccount.class
 run: Bank.class
 	java Bank
 
+debug: Bank.class
+	jdb Bank
+
 clean:
 	rm *.class

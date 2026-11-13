@@ -18,14 +18,8 @@ public abstract class User implements HasMenu, Serializable {
         System.out.println("Login Successful......");
 	System.out.println();
         success = true;
-      }
-      else {
-        System.out.println("Wrong PIN...");
       }//end if
-    }
-    else {
-      System.out.println("Wrong User Name...");
-    }// end if
+    }//end if
     return success;
   }// end login
 
@@ -35,13 +29,7 @@ public abstract class User implements HasMenu, Serializable {
       if (PIN.equals(this.PIN)){
         System.out.println("Login Successful.......");
         success = true;
-      }
-      else {
-        System.out.println("Wrong PIN...");
       }// end if
-    }
-    else {
-      System.out.println("Wrong User Name...");
     }// end if
     return success;
   }// end login alt
