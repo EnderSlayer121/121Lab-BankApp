@@ -40,11 +40,18 @@ public class Bank implements HasMenu {
         System.out.println("Entering Customer Login");
       } else if (userChoice.equals("2")){
         System.out.println("Entering Admin Login");
+        this.startAdmin();
       } else {
         System.out.println("Error: Please enter only numbers from 0-2.");
       }// end if
     }// end while
   }// end start
+
+  public void startAdmin(){
+    if (this.admin.login()){
+      
+    }//end if
+  }// end startAdmin
 
 }// end Bank
 
